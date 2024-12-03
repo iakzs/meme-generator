@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Impact&family=Oswald:wght@700&family=Roboto:wght@900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meme Generator</h1>
+        </header>
+        
+        <main>
+            <div class="meme-editor">
+                <div class="upload-section">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <label for="imageInput" class="upload-btn">Choose Image or Drop Here</label>
+                </div>
+                
+                <div class="canvas-container">
+                    <canvas id="memeCanvas"></canvas>
+                </div>
+                
+                <div class="text-controls">
+                    <input type="text" id="topText" placeholder="Top Text">
+                    <input type="text" id="bottomText" placeholder="Bottom Text">
+                    <select id="fontFamily">
+                        <option value="Impact">Impact</option>
+                        <option value="Anton">Anton</option>
+                        <option value="Oswald">Oswald</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Permanent Marker">Permanent Marker</option>
+                    </select>
+                    <select id="fontSize">
+                        <option value="20">Small</option>
+                        <option value="30" selected>Medium</option>
+                        <option value="40">Large</option>
+                    </select>
+                    <input type="color" id="textColor" value="#ffffff">
+                </div>
+                
+                <button id="downloadBtn" class="download-btn">Download Meme</button>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
